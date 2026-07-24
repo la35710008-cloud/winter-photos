@@ -1,14 +1,98 @@
 <!doctype html>
 <html lang="zh-Hant">
   <head>
-  <meta charset="UTF-8" />
-  <title>winter</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>winter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
   <body>
-    <h1>winter</h1>
-    <p>I like winter</p>
-    <img src="images/winter1.jfif" alt="和朋友一起的照片" />
+    <!-- Splash -->
+    <div class="splash" id="splash">
+      <div class="splash-row splash-row-top">
+        <div class="splash-box"></div>
+        <div class="splash-box"></div>
+        <div class="splash-box"></div>
+        <div class="splash-box"></div>
+        <div class="splash-box"></div>
+      </div>
+      <div class="splash-row splash-row-bottom">
+        <div class="splash-box"></div>
+        <div class="splash-box"></div>
+        <div class="splash-box"></div>
+        <div class="splash-box"></div>
+        <div class="splash-box"></div>
+      </div>
+    </div>
+
+    <!-- Tech overlay — back -->
+    <div class="tech-bg tech-bg--back" aria-hidden="true">
+      <div class="tech-gradient"></div>
+      <canvas id="particle-canvas"></canvas>
+      <div class="tech-ring"></div>
+    </div>
+
+    <!-- Background layers -->
+    <div class="hero-bg-base hero-image-animate"></div>
+    <canvas id="reveal-canvas"></canvas>
+    <div class="hero-bg-reveal" id="reveal-img"></div>
+
+    <!-- Tech overlay — front -->
+    <div class="tech-bg tech-bg--front" aria-hidden="true">
+      <div class="tech-grid"></div>
+      <div class="tech-scanline"></div>
+      <div class="tech-noise"></div>
+      <div class="tech-corners">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="tech-data tech-data--tl">
+        <span>sys · archive_2026</span>
+        <span>mem · 0047 fragments</span>
+      </div>
+      <div class="tech-data tech-data--br">
+        <span>25.0330° N · 121.5654° E</span>
+        <span>signal · stable</span>
+      </div>
+    </div>
+
+    <nav class="glass-nav">
+      <a class="logo" href="#">w</a>
+
+      <div class="nav-links">
+        <a href="#">Gallery</a>
+        <a href="#">Archive</a>
+        <a href="#">About</a>
+      </div>
+
+      <a class="nav-button" href="#">enter</a>
+    </nav>
+
+    <main class="hero">
+      <div class="title title-animate">
+        <p>personal archive · 2026</p>
+        <h1>winter</h1>
+      </div>
+
+      <div class="bottom-info">
+        <p class="bottom-desc" id="bottom-desc">
+          Fragments of cold light, quiet nights, and the things I want to remember.
+        </p>
+
+        <a class="cta-btn cta-animate" href="#">
+          <span class="cta-btn-bg"></span>
+          <span class="cta-btn-text">explore memories</span>
+          <span class="cta-btn-circle">
+            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 13L13 5M13 5H6M13 5V12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+
+        <p class="right-text">A small space made for my photos, moods, and moments.</p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
